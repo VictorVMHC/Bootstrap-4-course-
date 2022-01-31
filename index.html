@@ -30,7 +30,7 @@
                         <a class="nav-link" href="./aboutus.html"> <span class="fa fa-info fa-lg"></span>  About</a>
                     </li>
                     <li class="nav-item">
-                        <a class=" nav-link" href="#"><span class="fa fa-list"></span>  Menu</a>
+                        <a class=" nav-link" href="./nuevo.html"><span class="fa fa-list"></span>  Menu</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span>  Contact</a>
@@ -42,12 +42,15 @@
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header">
-                <div class="col-12 col-sm-6">
+                <div class="col-md-6 col-sm-12">
                     <h1>Ristorante con Fusion</h1>
                     <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
                 </div>
-                <div class="col-12 col-sm align-self-center">
+                <div class="col-sm-12 col-md-3  align-self-center mb-1">
                     <img src="./img/logo.png" class=" img-fluid">
+                </div>
+                <div class="col-sm-12 col-md-3 align-self-center d-grid gap-2 ">
+                    <button type="button" class="btn btn-warning btn-sm" > <a class=" btn" tabindex="-1"  href="#cardForm"> Reserve Table</a></button>   
                 </div>
             </div>
         </div>
@@ -70,13 +73,18 @@
         </div>
 
 
-        <div class="row row-content align-items-center">
+        <div class="row row-content align-items-center flex-row-reverse">
             <div class="col-12 col-sm-4 order-sm-last col-md-3">
                 <h3>This Month's Promotions</h3>
             </div>
             <div class="col col-sm order-sm-first col-md">
-                <h2>Weekend Grand Buffet</h2>
-                <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
+                <div class="d-flex p-3">
+                    <div>
+                        <h2 class=" mt-0">Weekend Grand Buffet <span class=" badge bg-danger">NEW</span></h2>
+                        <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
+                    </div>
+                    <img class=" d-flex me-3 img-thumbnail align-self-center" src="./img/buffet.png" alt="uthappizza" srcset="">
+                </div>
             </div>
         </div>
 
@@ -88,16 +96,54 @@
                 <div class=" d-flex p-3">
                     <img src="./img/alberto.png" alt=alberto" class="d-flex me-3 img-thumbnail align-self-center">
                     <div>
-                        <h2>Alberto Somayya</h2>
+                        <h2 class=" mt-0">Alberto Somayya</h2>
                         <h4>Executive Chef</h4>
-                        <p>Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. </p>
+                        <p class="d-none d-sm-block">Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. </p>
                     </div>
                 </div>
-               
+            </div>
+        </div>
+        <div class="row row-content justify-content-center align-items-center" id="cardForm">
+            <div class=" col-sm-12 col-md-8">
+                <div class="card">
+                    <h3 class=" card-header text-white bg-warning ">
+                        Reserve a table
+                    </h3>
+                    <div class=" card-body">
+                        <form action="">
+                            <div class="row">
+                                <label for="Guest" class="col-md-4 col-sm-12 mb-3">Number of guests</label>
+                                <div class="col col-md-6 col-sm-12">
+                                    <input type="radio" class="form-check-input" name="1" id="n1"> 
+                                    <label for="n1">1</label>
+                                    <input type="radio" class="form-check-input" name="2" id="n2"> 
+                                    <label for="n2">2</label>
+                                    <input type="radio" class="form-check-input" name="3" id="n3"> 
+                                    <label for="n3">3</label>
+                                    <input type="radio" class="form-check-input" name="4" id="n4"> 
+                                    <label for="n4">4</label>
+                                    <input type="radio" class="form-check-input" name="5" id="n5"> 
+                                    <label for="n5">5</label>
+                                    <input type="radio" class="form-check-input" name="6" id="n6"> 
+                                    <label for="n6">6</label>
+                                </div>
+                                <label for="Guest" class="col-md-4  col-sm-12 mb-3">Date and time</label>
+                                <div class="col-md-3 col-sm-12 mb-2">
+                                    <input type="text" class="form-control" id="date" name="date" placeholder="Date">
+                                </div>    
+                                <div class=" col-md-3 col-sm-12 ">
+                                    <input type="text" class="form-control" id="time" name="time" placeholder="time">
+                                </div>
+                                <label for="" class="col-md-4 col-sm-12">&nbsp;</label>
+                                <button class="btn btn-primary col-4 ms-2">Reserve</button>
+                            </div>
+                        </form>
+                    </div> 
+                    
+                </div>
             </div>
         </div>
     </div>
-
     <footer class="footer">
         <div class="container">
             <div class="row">             
