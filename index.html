@@ -37,7 +37,7 @@
                     </li>
                 </ul>
                 <span class=" navbar-text">
-                    <a href="" data-bs-toggle="modal" data-bs-target="#loginModal">
+                    <a href="" data-bs-toggle="modal" id="btnLogin">
                         <span class=" fa fa-sign-in"></span>Login
                     </a>
                 </span>
@@ -50,16 +50,16 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Login </h4>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn btn-close" id="xmodallogin"></button>
                 </div>
                 <div class="modal-body">
                     <form>
                         <div class="form-row">
-                            <div class="form-group col-sm-4">
+                            <div class="form-group col-sm-4 me-2">
                                     <label class="sr-only" for="exampleInputEmail3">Email address</label>
                                     <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3" placeholder="Enter email">
                             </div>
-                            <div class="form-group col-sm-4">
+                            <div class="form-group col-sm-4 me-2">
                                 <label class="sr-only" for="exampleInputPassword3">Password</label>
                                 <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3" placeholder="Password">
                             </div>
@@ -72,7 +72,7 @@
                             </div>
                         </div>
                         <div class="form-row">
-                            <button type="button" class="btn btn-secondary btn-sm ms-auto" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-secondary btn-sm ms-auto btntext" id="cancelmodallo">Cancel</button>
                             <button type="submit" class="btn btn-primary btn-sm ms-1">Sign in</button>        
                         </div>
                     </form>
@@ -86,7 +86,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Reserve a Table </h4>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close " id="xmodalreserve"></button>
                 </div>
                 <div class="modal-body">
                     <form>
@@ -123,7 +123,7 @@
                                 <input type="text" class="form-control" id="time" name="time" placeholder="time">
                             </div>
                             <div class="col col-12 ms-2">
-                                <button type="button" class=" col-md-2 offset-md-4  col-sm-6  btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+                                <button type="button" class=" col-md-2 offset-md-4  col-sm-6  btn btn-secondary btntext" id="cancelmodalre">Cancel</button>
                                 <button class="btn btn-primary col-sm-4 col-md-2 ms-2">Reserve</button>
                             </div>
                         </div>
@@ -143,7 +143,7 @@
                     <img src="./img/logo.png" class=" img-fluid">
                 </div>
                 <div class="col-sm-12 col-md-3 align-self-center d-grid gap-2 ">
-                    <a class=" btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#reservemodal" tabindex="-1"  href="#cardForm"> Reserve Table</a> 
+                    <a class=" btn btn-warning btn-sm" id="btnreserve" tabindex="-1"> Reserve Table</a> 
                 </div>
             </div>
         </div>
@@ -348,6 +348,24 @@
                     $("#carouselButton").children("span").removeClass('fa-play');
                     $("#carouselButton").children("span").addClass('fa-pause');                    
                 }
+            });
+            $("#btnLogin").click(function(){
+                $("#loginModal").modal('show');
+            });
+            $("#xmodallogin").click(function(){
+                $("#loginModal").modal('hide');
+            });
+            $("#cancelmodallo").click(function(){
+                $("#loginModal").modal('hide');
+            });
+            $("#btnreserve").click(function(){
+                $("#reservemodal").modal('show');
+            });
+            $("#xmodalreserve").click(function(){
+                $("#reservemodal").modal('hide');
+            });
+            $("#cancelmodalre").click(function(){
+                $("#reservemodal").modal('hide');
             });
         });
     </script>

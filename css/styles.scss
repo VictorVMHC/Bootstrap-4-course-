@@ -66,3 +66,35 @@ body {
     position: absolute;
     bottom: 0px;
 }
+
+.form-group {
+    margin-bottom: 1rem;
+}
+  
+.form-inline .form-control {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+}
+  
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -5px;
+    margin-left: -5px;
+}
+  
+label {
+    margin-bottom: 0.5rem;
+}
+
+.modal-header {
+    background: $background-dark;
+    color: floralwhite;
+}
+.modal-body {
+    background: $background-pale;
+}
+.btntext {
+    color: floralwhite;
+}
