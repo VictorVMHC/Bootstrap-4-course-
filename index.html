@@ -7,10 +7,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <!-- Bootstrap CSS -->
+    <!-- build:css css/main.css -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="./node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="./node_modules/bootstrap-social/bootstrap-social.css">
+    <!-- endbuild -->
     <title>Ristorante Con Fusion</title>
 </head>
 
@@ -237,7 +239,7 @@
             </div>
             <div class="col col-sm order-sm-first col-md">
                 <div class=" d-flex p-3">
-                    <img src="./img/alberto.png" alt=alberto" class="d-flex me-3 img-thumbnail align-self-center">
+                    <img src="./img/alberto.png" alt="alberto" class="d-flex me-3 img-thumbnail align-self-center">
                     <div>
                         <h2 class=" mt-0">Alberto Somayya</h2>
                         <h4>Executive Chef</h4>
@@ -246,48 +248,6 @@
                 </div>
             </div>
         </div>
-        <!--        
-        <div class="row row-content justify-content-center align-items-center" id="cardForm">
-            <div class=" col-sm-12 col-md-8">
-                <div class="card">
-                    <h3 class=" card-header text-white bg-warning ">
-                        Reserve a table
-                    </h3>
-                    <div class=" card-body">
-                        <form action="">
-                            <div class="row">
-                                <label for="Guest" class="col-md-4 col-sm-12 mb-3">Number of guests</label>
-                                <div class="col col-md-6 col-sm-12">
-                                    <input type="radio" class="form-check-input" name="1" id="n1"> 
-                                    <label for="n1">1</label>
-                                    <input type="radio" class="form-check-input" name="2" id="n2"> 
-                                    <label for="n2">2</label>
-                                    <input type="radio" class="form-check-input" name="3" id="n3"> 
-                                    <label for="n3">3</label>
-                                    <input type="radio" class="form-check-input" name="4" id="n4"> 
-                                    <label for="n4">4</label>
-                                    <input type="radio" class="form-check-input" name="5" id="n5"> 
-                                    <label for="n5">5</label>
-                                    <input type="radio" class="form-check-input" name="6" id="n6"> 
-                                    <label for="n6">6</label>
-                                </div>
-                                <label for="Guest" class="col-md-4  col-sm-12 mb-3">Date and time</label>
-                                <div class="col-md-3 col-sm-12 mb-2">
-                                    <input type="text" class="form-control" id="date" name="date" placeholder="Date">
-                                </div>    
-                                <div class=" col-md-3 col-sm-12 ">
-                                    <input type="text" class="form-control" id="time" name="time" placeholder="time">
-                                </div>
-                                <label for="" class="col-md-4 col-sm-12">&nbsp;</label>
-                                <button class="btn btn-primary col-4 ms-2">Reserve</button>
-                            </div>
-                        </form>
-                    </div> 
-                    
-                </div>
-            </div>
-        </div>
- -->
     </div>
     <footer class="footer">
         <div class="container">
@@ -331,50 +291,12 @@
         </div>
     </footer>
     <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+    <!-- build:js js/main.js -->
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $("#mycarousel").carousel( { interval: 2000 } );
-            $("#carouselButton").click(function(){
-                if ($("#carouselButton").children("span").hasClass('fa-pause')) {
-                    $("#mycarousel").carousel('pause');
-                    $("#carouselButton").children("span").removeClass('fa-pause');
-                    $("#carouselButton").children("span").addClass('fa-play');
-                }
-                else if ($("#carouselButton").children("span").hasClass('fa-play')){
-                    $("#mycarousel").carousel('cycle');
-                    $("#carouselButton").children("span").removeClass('fa-play');
-                    $("#carouselButton").children("span").addClass('fa-pause');                    
-                }
-            });
-            $("#btnLogin").click(function(){
-                $("#loginModal").modal('show');
-            });
-            $("#xmodallogin").click(function(){
-                $("#loginModal").modal('hide');
-            });
-            $("#cancelmodallo").click(function(){
-                $("#loginModal").modal('hide');
-            });
-            $("#btnreserve").click(function(){
-                $("#reservemodal").modal('show');
-            });
-            $("#xmodalreserve").click(function(){
-                $("#reservemodal").modal('hide');
-            });
-            $("#cancelmodalre").click(function(){
-                $("#reservemodal").modal('hide');
-            });
-        });
-    </script>
-
-    <!--    <script>
-        $(document).ready(function() {
-            $('[data-bs-toggle="tooltip"]').tooltip();
-        })
-    </script> -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="js/scripts.js"></script>
+    <!-- endbuild -->
 </body>
 
 </html>
